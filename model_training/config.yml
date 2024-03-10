@@ -1,0 +1,63 @@
+# Package Overview
+package_name: obesity_risk_detection
+
+# Data Files
+training_data_file: train.csv
+
+# Variables
+# The variable we are attempting to predict (NObeyesdad)
+target: NObeyesdad
+
+pipeline_name: obesity_risk_detection
+pipeline_save_file: obesity_risk_detection_output_v
+encoder_save_file: obesity_risk_detection_target_encoder_v
+
+# Features that will go inside processing pipeline
+features:
+  - Gender
+  - Age
+  - Height
+  - Weight
+  - family_history_with_overweight
+  - FAVC
+  - FCVC
+  - NCP
+  - CAEC
+  - SMOKE
+  - CH2O
+  - SCC           
+  - FAF     
+  - TUE
+  - CALC
+  - MTRANS 
+
+
+# Features names
+
+Gender: Gender
+Age: Age
+Height: Height
+Weight: Weight
+family_history_with_overweight: family_history_with_overweight
+FAVC: FAVC
+FCVC: FCVC
+NCP: NCP
+CAEC: CAEC
+SMOKE: SMOKE
+CH2O: CH2O
+SCC: SCC
+FAF: FAF
+TUE: TUE
+CALC: CALC
+MTRANS : MTRANS
+
+  
+# Set train/test split
+test_size: 0.20
+
+# Set the random seed
+random_state: 42
+
+# Alogrithm parameters
+n_estimators: 100
+max_depth: 10
