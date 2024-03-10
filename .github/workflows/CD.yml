@@ -15,12 +15,12 @@ jobs:
       - name: Pull Docker Image
         env:
           DOCKER_USER: sumanthegdedocker
-        run: sudo docker pull sumanthegdedocker/obesity_risk:latest
+        run: docker pull sumanthegdedocker/obesity_risk:latest
 
       - name: Delete Old Docker Container
-        run: sudo docker rm -f obesity_risk-container || true
+        run: docker rm -f obesity_risk-container || true
 
       - name: Run Docker Container
         env:
           DOCKER_USER: sumanthegdedocker
-        run: sudo docker run -it -d -p 8001:8001 --name obesity_risk-container sumanthegdedocker/obesity_risk:latest
+        run: docker run -it -d -p 8001:8001 --name obesity_risk-container sumanthegdedocker/obesity_risk:latest
