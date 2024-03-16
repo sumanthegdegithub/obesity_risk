@@ -26,6 +26,7 @@ jobs:
       with:
         name: my-trained-pipeline
         path: model_training/trained_models/*.pkl
+    - uses: actions/upload-artifact@v2
       with:
         name: my-trained-encoder
         path: model_training/encoder_models/*.pkl
@@ -46,6 +47,7 @@ jobs:
       with:
         name: my-trained-pipeline
         path: model_training/trained_models
+    - uses: actions/download-artifact@v2
       with:
         name: my-trained-encoder
         path: model_training/encoder_models
@@ -67,6 +69,7 @@ jobs:
       with:
         name: my-trained-pipeline
         path: model_training/trained_models
+    - uses: actions/download-artifact@v2
       with:
         name: my-trained-encoder
         path: model_training/encoder_models
