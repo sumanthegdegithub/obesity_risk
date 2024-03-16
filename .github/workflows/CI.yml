@@ -26,6 +26,7 @@ jobs:
       with:
         name: my-trained-pipeline
         path: model_training/trained_models/*.pkl
+      with:
         name: my-trained-encoder
         path: model_training/encoder_models/*.pkl
         retention-days: 1
@@ -45,6 +46,7 @@ jobs:
       with:
         name: my-trained-pipeline
         path: model_training/trained_models
+      with:
         name: my-trained-encoder
         path: model_training/encoder_models
     - name: Install dependencies
@@ -65,6 +67,7 @@ jobs:
       with:
         name: my-trained-pipeline
         path: model_training/trained_models
+      with:
         name: my-trained-encoder
         path: model_training/encoder_models
     - name: Install dependencies
