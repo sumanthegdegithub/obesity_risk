@@ -4,12 +4,12 @@ FROM python:3.10
 RUN pwd && ls -lrth
 ADD /model_api /model_api/
 RUN pwd && ls -lrth
-ADD /model_training/trained_models model_api/model_training/trained_models
-RUN pwd && ls -lrth
-ADD /model_training/encoder_models model_api/model_training/encoder_models
-RUN pwd && ls -lrth model_api/model_training
-RUN pwd && ls -lrth model_api/model_training/trained_models
-RUN pwd && ls -lrth model_api/model_training/encoder_models
+#ADD /model_training/trained_models model_api/model_training/trained_models
+#RUN pwd && ls -lrth
+#ADD /model_training/encoder_models model_api/model_training/encoder_models
+#RUN pwd && ls -lrth model_api/model_training
+#RUN pwd && ls -lrth model_api/model_training/trained_models
+#RUN pwd && ls -lrth model_api/model_training/encoder_models
 # specify working directory
 WORKDIR /model_api
 RUN pwd && ls -lrth
