@@ -16,7 +16,7 @@ from model_training.processing.validation import validate_inputs
 
 pipeline_file_name = f"{config.pipeline_save_file}{_version}.pkl"
 obesity_risk_pipe = load_pipeline(file_name = pipeline_file_name)
-
+print('model_loaded')
 encoder_file_name = f"{config.encoder_save_file}{_version}.pkl"
 encoder = load_encoder(file_name = encoder_file_name)
 
