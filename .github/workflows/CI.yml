@@ -26,6 +26,8 @@ jobs:
       with:
         name: my-trained-pipeline
         path: model_training/trained_models/*.pkl
+        name: my-trained-encoder
+        path: model_training/encoder_models/*.pkl
         retention-days: 1
 
   test:
@@ -43,6 +45,8 @@ jobs:
       with:
         name: my-trained-pipeline
         path: model_training/trained_models
+        name: my-trained-encoder
+        path: model_training/encoder_models
     - name: Install dependencies
       run: pip install -r requirements/test_requirements.txt
 
@@ -61,6 +65,8 @@ jobs:
       with:
         name: my-trained-pipeline
         path: model_training/trained_models
+        name: my-trained-encoder
+        path: model_training/encoder_models
     - name: Install dependencies
       run: pip install --upgrade build
     - name: Build package
